@@ -1,6 +1,7 @@
 /*
 Blink-a-tron patterns for 6 LED arcade buttons
 (c) 2015 Ryan Bates, RetroBuiltGames.com
+edited by Benjamin Vitters (2017)
 */
 //LED pin connections for Teensy 2.0++
 //change these for your arduino compatible device
@@ -44,26 +45,34 @@ pinMode(buttonPin, INPUT);
 }
 
 //pattern routine that loops forever; arrange, copy, remove these to make your 'light show'
-void loop(){
-char c = Serial.read();
-if(c == 'a'){
-  ////////scrollup();          scrolldown();
-  ////////lightup();           lightdown();
-  scrollpairup();    
-  scrollpairdown();
-  loopforward();
-         
+  //scrollup();         
+  //scrolldown();
+  //lightup();           
+  //lightdown();
+  //scrollpairup();    
+  //scrollpairdown();
+  //loopforward();
   //loopreverse();
-  ////////loopspeedUpFwd();    loopspeedDwnRvs();
+  //loopspeedUpFwd();    
+  //loopspeedDwnRvs();
   //strobethreeUP();     
   //strobethreeDWN();
-  //////strobecrisscross();  strobecircle();
+  //strobecrisscross();  
+  //strobecircle();
   //zigzag1();           
   //oneoffloop();
-  //fade();           //fade features are for PWM pins only
+  //fade();           
+  //fade features are for PWM pins only
   //fadethree();      
   //fadecross();
   //fadecrossreverse();
+
+void loop(){
+char c = Serial.read();
+if(c == 'a'){
+  scrollpairup();    
+  scrollpairdown();
+  loopforward();
   Serial.println("Inserted coin");
 }
 if(c =='s'){
