@@ -75,18 +75,14 @@ if(c == 'a'){
   loopforward();
   Serial.println("Inserted coin");
 }
-if(c =='s'){
+if(c =='1'){
   scrollup();          scrolldown();
   strobecrisscross();  
-  fadecrossreverse(); 
+  scrollpairup();    
+  scrollpairdown();
   Serial.println("BigBox startup");
 }
-if(c =='g'){
-  scrollup();          scrolldown();
-  strobecircle();
-  Serial.println("Game started");  
-}
-if(c =='l'){
+if(c =='2'){
   scrollup();          scrolldown();
   lightup();           lightdown();
   scrollpairup();    
@@ -99,11 +95,19 @@ if(c =='l'){
   strobecrisscross();  strobecircle();
   zigzag1();           
   oneoffloop();
-  fade();           //fade features are for PWM pins only
-  fadethree();      
-  fadecross();
-  fadecrossreverse();
-  Serial.println("Light showoff");  
+  Serial.println("BigBox ended");  
+}
+if(c == '4'){
+  scrollpairup();    
+  scrollpairdown();
+  loopforward();
+  Serial.println("Game stoped");
+}
+if(c =='8'){
+  scrollpairup();    
+  scrollpairdown();
+  lightup();           lightdown();
+  Serial.println("Changed list");  
 }
  else {
  digitalWrite(led0, HIGH);   
